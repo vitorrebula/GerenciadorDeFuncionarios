@@ -1,0 +1,45 @@
+.cor{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(7, 36, 44);
+}
+
+input{
+    width: 250px;
+    height: 40px;
+}
+
+input:focus{
+    outline: none;
+}
+
+img{
+    width: 20%;
+}
+
+.login{
+    background-color: #ffffff; /* Cor de fundo do botão */
+    border: solid 2px; /* Remove a borda padrão */
+    border-color: rgb(7, 36, 44);
+    color: rgb(7, 36, 44); /* Cor do texto */
+    padding: 8px 32px; /* Espaçamento interno (topo/baixo, esquerda/direita) */
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Remove a decoração do texto */
+    display: inline-block; /* Exibe como bloco */
+    font-size: 16px; /* Tamanho da fonte */
+    margin: 4px 2px; /* Margem externa (topo/baixo, esquerda/direita) */
+    cursor: pointer; /* Cursor ao passar por cima */
+    border-radius: 20px; /* Define o raio dos cantos */
+}
+
+#loading{
+    display: none;
+}
+
+.erroSenha{
+    display: none;
+    color: red;
+}
+
+p{
+    font-size: 13px;
+}

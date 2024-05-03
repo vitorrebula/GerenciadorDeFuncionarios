@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GLET Logística!</title>
+  <link rel="stylesheet" href="Funcionarios.css">
 
   <script src="script.js"></script>
 
@@ -42,25 +43,24 @@
   </header>
   <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#" style="color: black;" id="ativos">Funcionarios</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="#" style="color: black;" id="inativos">Inativados</a>
-          </li>
+      <div class="dropdown me-auto navbar-nav mb-2 mb-lg-0" id="nav1Func">
+        <button class="btn btn-secondary dropdown-toggle me-auto" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="escolhedorvisualizacao">
+          Todos
+        </button>
+        <ul class="dropdown-menu" id="modovisualizacao">
+          <li><a class="dropdown-item" id="Todos" href="#">Todos Funcionários</a></li>
+          <li><a class="dropdown-item" id="Ativos" href="#">Ativos</a></li>
+          <li><a class="dropdown-item" id="Inativos" href="#">Inativos</a></li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="InputBusca">
+      </div>
+        <form class="d-flex " role="search" id="nav2Func">
+          <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search" id="InputBusca">
           <button class="btn btn-outline-success" type="submit" id="Procurar">Procurar</button>
         </form>
-      </div>
     </div>
   </nav>
   <div class="d-grid gap-2">
-    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Adicionar Funcionário</button>
+    <button class="btn btn-primary" type="button" data-bs-toggle="modal" id="btnAdicionar" data-bs-target="#exampleModal">Adicionar Funcionário</button>
   </div>
    <!-- Modal -->
    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -68,17 +68,10 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Insira as Informações</h1>
-          <div id="formsinserir">
-            
-          </div>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
           </button>
         </div>
-        <div class="modal-body" id="modal-body">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary">Salvar</button>
+        <div class="modal-body" id="modalAdicionar">
         </div>
       </div>
     </div>

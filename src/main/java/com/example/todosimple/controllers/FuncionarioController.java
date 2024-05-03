@@ -31,7 +31,7 @@ public class FuncionarioController {
     private FuncionarioService FuncionarioService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<Funcionario> findbyId(@PathVariable Long id){
+    public ResponseEntity <Funcionario> findbyId(@PathVariable Long id){
         Funcionario obj = this.FuncionarioService.findbyId(id);
         return ResponseEntity.ok().body(obj);
     }
@@ -44,17 +44,17 @@ public class FuncionarioController {
 
     @PostMapping
     @Validated(ICreateFuncionario.class)
-    public ResponseEntity<Void> create(@Valid @RequestBody Funcionario obj){
+    public ResponseEntity<Funcionario> create(@Valid @RequestBody Funcionario obj){
         this.FuncionarioService.create(obj);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
-        return ResponseEntity.created(uri).build();
+        return ResponseEntity.created(uri).body(obj);
     }
 
     @PutMapping
     @Validated(IUpdateFuncionario.class)
-    public ResponseEntity<Void> update(@Valid @RequestBody Funcionario obj){
+    public ResponseEntity<Funcionario> update(@Valid @RequestBody Funcionario obj){
         this.FuncionarioService.update(obj);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.ok().body(obj); // TROCAR POR BODY(OBJ), e buildar
     }
 
     @DeleteMapping("/{id}")

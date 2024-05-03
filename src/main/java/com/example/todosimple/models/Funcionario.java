@@ -66,7 +66,7 @@ public class Funcionario {
     @Column(name = "Observações")
     @NotEmpty(groups = { ICreateFuncionario.class, IUpdateFuncionario.class })
     @NotNull(groups = { ICreateFuncionario.class, IUpdateFuncionario.class })
-    @Size(groups = ICreateFuncionario.class, min = 2, max = 1000)
+    @Size(groups = ICreateFuncionario.class, min = 2, max = 200)
     private String observacoes;
 
 

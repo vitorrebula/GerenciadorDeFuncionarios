@@ -1,0 +1,17 @@
+
+
+
+/* media queries, o bootstrap tava dando display none em algumas coisas n consegui arrumar com o framework */
+@media screen and (max-width: 430px){
+    #col3,#col4,#col5{
+        display: none;
+    }
+    #cpfscope, #cargoscope, #statuscope{
+        display: none;
+    }
+    #nav1Func, #nav2Func{
+        margin: auto;
+        display: block;
+    }
+
+}
